@@ -11,13 +11,15 @@ public class StudentSpringApiRestApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(StudentSpringApiRestApplication.class, args);
 	}
-	
+
 	@RestController
 	class HelloController {
 		@GetMapping("/")
-		String hello(){
+		String hello() {
 			return "Hello from App Engine !";
-	}	
+		}
 	}
+	
+	
 
 }
