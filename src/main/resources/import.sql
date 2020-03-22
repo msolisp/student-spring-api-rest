@@ -1,3 +1,6 @@
+#FILE TO UPLOAD DATA IN MYSQL
+#COURSE: MAINTAINING TABLE
+
 INSERT INTO course (code, name) VALUES ("CPB", "Complete Python Bootcamp 2018");
 INSERT INTO course (code, name) VALUES ("CPBU", "Complete Python Bootcamp 2020");
 INSERT INTO course (code, name) VALUES ("JPG", "Java Programming Guide");
@@ -12,3 +15,7 @@ INSERT INTO course (code, name) VALUES ("PDDF", "Python 3: Deep Dive (Part 1 - F
 
 INSERT INTO course (code, name) VALUES ("ACCA", "Amazon AWS: Curso Completo Arquitecto Soluciones Certificado");
 INSERT INTO course (code, name) VALUES ("JSCF", "Java Selenium Cucumber Framework Part 2");
+
+
+#STUDENT
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("15.123.456-6", 19, "JOBS", "STEVE", "JPG");

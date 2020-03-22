@@ -19,7 +19,5 @@ public class StudentSpringApiRestApplication {
 			return "Hello from App Engine !";
 		}
 	}
-	
-	
 
 }
