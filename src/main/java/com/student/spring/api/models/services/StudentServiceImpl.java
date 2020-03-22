@@ -13,7 +13,7 @@ import com.student.spring.api.models.entity.Student;
 
 @Service
 public class StudentServiceImpl implements IStudentService {
-	
+
 	@Autowired
 	private IStudentDao studentDao;
 
@@ -30,25 +30,29 @@ public class StudentServiceImpl implements IStudentService {
 	}
 
 	@Override
+	@Transactional(readOnly = true)
 	public Student findById(String rut) {
-		return null;
+		return studentDao.findById(rut).orElse(null);
 	}
 
 	@Override
+	@Transactional
 	public Student save(Student student) {
-		return null;
+		return studentDao.save(student);
 	}
 
 	@Override
+	@Transactional
 	public void delete(String rut) {
-		
+		studentDao.deleteById(rut);
 	}
 
 	@Override
+	@Transactional
 	public boolean existsById(String rut) {
-		return false;
+		Boolean exits;
+		exits = studentDao.existsById(rut);
+		return exits;
 	}
-	
-	
 
 }

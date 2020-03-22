@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 import com.student.spring.api.models.entity.Student;
 
 public interface IStudentService {
-	
+
 	public List<Student> findAll();
 
 	public Page<Student> findAll(Pageable pageable);
@@ -20,7 +20,5 @@ public interface IStudentService {
 	public void delete(String rut);
 
 	public boolean existsById(String rut);
-	
-	
 
 }

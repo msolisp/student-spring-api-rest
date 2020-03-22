@@ -13,8 +13,7 @@ import com.student.spring.api.models.entity.Course;
 
 @Service
 public class CourseServiceImpl<E> implements ICourseService {
-	
-	
+
 	@Autowired
 	private ICourseDao courseDao;
 
@@ -50,6 +49,7 @@ public class CourseServiceImpl<E> implements ICourseService {
 	}
 
 	@Override
+	@Transactional
 	public boolean existsById(String code) {
 		Boolean exits;
 		exits = courseDao.existsById(code);

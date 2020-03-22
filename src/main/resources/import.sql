@@ -18,4 +18,19 @@ INSERT INTO course (code, name) VALUES ("JSCF", "Java Selenium Cucumber Framewor
 
 
 #STUDENT
-INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("15.123.456-6", 19, "JOBS", "STEVE", "JPG");
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("11.123.456-6", 19, "JOBS", "STEVE", "JPG");
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("12.123.456-6", 20, "BEZOS", "JEFF", "ACCA");
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("13.123.456-6", 20, "GATES", "BILL", "JPG");
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("14.123.456-6", 21, "BUFFET", "WARREN", "ACCA");
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("15.123.456-6", 22, "ZUCKERBERG", "MARK", "JPG");
+
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("16.123.456-6", 23, "ORTEGA", "AMANCIO", "CPB");
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("17.123.456-6", 19, "ELLISON", "LARRY", "ACDA");
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("18.123.456-6", 20, "DELL", "MICHAEL", "JPG");
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("19.123.456-6", 24, "BLOOMBERG", "MICHAEL", "JSCF");
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("20.123.456-6", 27, "WALTON", "JIM", "JPG");
+
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("21.123.456-6", 22, "MA", "JACK", "JPG");
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("22.123.456-6", 25, "KNIGHT", "PHIL", "ACCP");
+INSERT INTO student (rut, age, last_name, name, course_code) VALUES ("23.123.456-6", 19, "MACKENZIE", "BEZOS", "JPG");
+

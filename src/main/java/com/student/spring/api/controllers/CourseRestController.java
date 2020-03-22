@@ -64,7 +64,6 @@ public class CourseRestController {
 		return new ResponseEntity<Course>(course, HttpStatus.OK);
 	}
 
-	// OK
 	@PostMapping("/courses")
 	public ResponseEntity<?> create(@RequestBody Course course) {
 

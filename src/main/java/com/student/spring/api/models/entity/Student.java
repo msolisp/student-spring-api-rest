@@ -11,6 +11,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "student")
@@ -31,10 +32,7 @@ public class Student implements Serializable {
 	@Column(nullable = false)
 	private String lastName;
 
-	@NotEmpty(message = "cannot be empty")
-	@Column(nullable = false, unique = true)
-	@Min(value = 18, message = "Age should not be less than 18")
-	@Max(value = 150, message = "Age should not be greater than 150")
+	@NotNull(message = "cannot be empty")
 	private int age;
 
 	@ManyToOne
