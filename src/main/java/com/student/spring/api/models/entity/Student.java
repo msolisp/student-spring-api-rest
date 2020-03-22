@@ -4,22 +4,20 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "student")
 public class Student implements Serializable {
 
-	/**
-	 * 
-	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@NotEmpty(message = "cannot be empty")
 	@Column(nullable = false, unique = true)
@@ -36,12 +34,33 @@ public class Student implements Serializable {
 	@NotEmpty(message = "cannot be empty")
 	@Column(nullable = false, unique = true)
 	@Min(value = 18, message = "Age should not be less than 18")
-    @Max(value = 150, message = "Age should not be greater than 150")
+	@Max(value = 150, message = "Age should not be greater than 150")
 	private int age;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@Size(min = 1, max = 4, message = "must be between 1 to 4 characters")
+	@ManyToOne
+	@JoinColumn(name = "course_code")
 	private Course course;
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Student(@NotEmpty(message = "cannot be empty") String rut,
+			@NotEmpty(message = "cannot be empty") String name, @NotEmpty(message = "cannot be empty") String lastName,
+			@NotEmpty(message = "cannot be empty") @Min(value = 18, message = "Age should not be less than 18") @Max(value = 150, message = "Age should not be greater than 150") int age,
+			Course course) {
+		super();
+		this.rut = rut;
+		this.name = name;
+		this.lastName = lastName;
+		this.age = age;
+		this.course = course;
+	}
 
 	public String getRut() {
 		return rut;
@@ -82,7 +101,5 @@ public class Student implements Serializable {
 	public void setCourse(Course course) {
 		this.course = course;
 	}
-
-	private static final long serialVersionUID = 1L;
 
 }

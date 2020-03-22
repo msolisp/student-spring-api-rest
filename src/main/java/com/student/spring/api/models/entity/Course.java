@@ -13,16 +13,28 @@ import javax.validation.constraints.Size;
 @Table(name = "course")
 public class Course implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@NotEmpty(message = "cannot be empty")
-	@Size(min = 1, max = 4, message = "must be between 1 to 4 characters")
-	@Column(nullable = false, unique = true)
+	@Column(length = 4, nullable = false, unique = true)
 	private String code;
 
 	@NotEmpty(message = "cannot be empty")
 	@Size(min = 1, max = 255, message = "Must be between 1 to 255 characters")
 	@Column(nullable = false)
 	private String name;
+
+	public Course() {
+		super();
+	}
+
+	public Course(@NotEmpty(message = "cannot be empty") String code,
+			@NotEmpty(message = "cannot be empty") @Size(min = 1, max = 255, message = "Must be between 1 to 255 characters") String name) {
+		super();
+		this.code = code;
+		this.name = name;
+	}
 
 	public String getName() {
 		return name;
@@ -40,6 +52,8 @@ public class Course implements Serializable {
 		this.code = code;
 	}
 
-	private static final long serialVersionUID = 1L;
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 }
